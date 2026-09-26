@@ -1,0 +1,306 @@
+{
+  "generated_at": "2026-09-26T04:26:48.053444+00:00",
+  "input_rows": 24,
+  "output_rows": 23,
+  "event_count": 25,
+  "corruption_types": [
+    "blank_summary",
+    "drop_latest_records",
+    "duplicate_rows",
+    "inject_noise",
+    "stale_date",
+    "truncate_title"
+  ],
+  "events": [
+    {
+      "corruption_type": "drop_latest_records",
+      "paper_id": "10.1145/3637528.3671812",
+      "column": "row",
+      "before": {
+        "paper_id": "10.1145/3637528.3671812",
+        "title": "Continuous Benchmark Evaluation for Enterprise Retrieval Pipelines",
+        "summary": "Static benchmarks fail to capture domain drift in enterprise knowledge bases. We establish a synthetic test generator that auto-creates paired evaluation sets whenever new corpora are ingested.",
+        "authors": [
+          "Quang Le",
+          "Yen Vu"
+        ],
+        "categories": [
+          "Evaluation Methodology",
+          "Enterprise Systems"
+        ],
+        "primary_category": "Evaluation Methodology",
+        "published": "2026-07-22T00:00:00.000Z",
+        "updated": "2026-07-22T00:00:00.000Z",
+        "abs_url": "https://doi.org/10.1145/3637528.3671812",
+        "pdf_url": "https://doi.org/10.1145/3637528.3671812",
+        "comment": "Crossref record 10.1145/3637528.3671812",
+        "authors_joined": "Quang Le, Yen Vu",
+        "categories_joined": "Evaluation Methodology, Enterprise Systems",
+        "summary_chars": 193,
+        "text_for_embedding": "Title: Continuous Benchmark Evaluation for Enterprise Retrieval Pipelines\nAuthors: Quang Le, Yen Vu\nPublished: 2026-07-22\nCategories: Evaluation Methodology, Enterprise Systems\nSummary: Static benchmarks fail to capture domain drift in enterprise knowledge bases. We establish a synthetic test generator that auto-creates paired evaluation sets whenever new corpora are ingested.",
+        "age_days": 66
+      },
+      "after": null
+    },
+    {
+      "corruption_type": "drop_latest_records",
+      "paper_id": "10.1145/3637528.3671808",
+      "column": "row",
+      "before": {
+        "paper_id": "10.1145/3637528.3671808",
+        "title": "Multi-Agent Consensus for High-Stakes Fact Verification",
+        "summary": "A single LLM is susceptible to confirmation bias when evaluating retrieved evidence. We demonstrate a multi-agent debate architecture where specialized verifier agents critique and corroborate citations.",
+        "authors": [
+          "Phong Vu",
+          "Ngan Hoang"
+        ],
+        "categories": [
+          "Multi-Agent Systems",
+          "Artificial Intelligence"
+        ],
+        "primary_category": "Multi-Agent Systems",
+        "published": "2026-07-19T00:00:00.000Z",
+        "updated": "2026-07-19T00:00:00.000Z",
+        "abs_url": "https://doi.org/10.1145/3637528.3671808",
+        "pdf_url": "https://doi.org/10.1145/3637528.3671808",
+        "comment": "Crossref record 10.1145/3637528.3671808",
+        "authors_joined": "Phong Vu, Ngan Hoang",
+        "categories_joined": "Multi-Agent Systems, Artificial Intelligence",
+        "summary_chars": 203,
+        "text_for_embedding": "Title: Multi-Agent Consensus for High-Stakes Fact Verification\nAuthors: Phong Vu, Ngan Hoang\nPublished: 2026-07-19\nCategories: Multi-Agent Systems, Artificial Intelligence\nSummary: A single LLM is susceptible to confirmation bias when evaluating retrieved evidence. We demonstrate a multi-agent debate architecture where specialized verifier agents critique and corroborate citations.",
+        "age_days": 69
+      },
+      "after": null
+    },
+    {
+      "corruption_type": "drop_latest_records",
+      "paper_id": "10.1145/3637528.3671804",
+      "column": "row",
+      "before": {
+        "paper_id": "10.1145/3637528.3671804",
+        "title": "Freshness SLAs for Real-Time LLM Knowledge Augmentation",
+        "summary": "We define freshness service-level agreements (SLAs) for temporal document ingestion. By tracking document age and update cadence, our orchestrator dynamically prioritizes recrawling high-churn technical corpora.",
+        "authors": [
+          "Bao Do",
+          "Linh Ngo"
+        ],
+        "categories": [
+          "Data Management",
+          "Artificial Intelligence"
+        ],
+        "primary_category": "Data Management",
+        "published": "2026-07-05T00:00:00.000Z",
+        "updated": "2026-07-05T00:00:00.000Z",
+        "abs_url": "https://doi.org/10.1145/3637528.3671804",
+        "pdf_url": "https://doi.org/10.1145/3637528.3671804",
+        "comment": "Crossref record 10.1145/3637528.3671804",
+        "authors_joined": "Bao Do, Linh Ngo",
+        "categories_joined": "Data Management, Artificial Intelligence",
+        "summary_chars": 211,
+        "text_for_embedding": "Title: Freshness SLAs for Real-Time LLM Knowledge Augmentation\nAuthors: Bao Do, Linh Ngo\nPublished: 2026-07-05\nCategories: Data Management, Artificial Intelligence\nSummary: We define freshness service-level agreements (SLAs) for temporal document ingestion. By tracking document age and update cadence, our orchestrator dynamically prioritizes recrawling high-churn technical corpora.",
+        "age_days": 83
+      },
+      "after": null
+    },
+    {
+      "corruption_type": "drop_latest_records",
+      "paper_id": "10.1145/3637528.3671807",
+      "column": "row",
+      "before": {
+        "paper_id": "10.1145/3637528.3671807",
+        "title": "Synthetic Corruption Testing: Stress-Testing Vector Search Robustness",
+        "summary": "We introduce an automated fuzzing suite that corrupts text chunks by injecting noise, truncating titles, and blanking summaries. Experiments reveal critical failure thresholds for dense embedding retrieval.",
+        "authors": [
+          "Kien Duong",
+          "Vy Ly"
+        ],
+        "categories": [
+          "Robustness",
+          "Information Retrieval"
+        ],
+        "primary_category": "Robustness",
+        "published": "2026-06-25T00:00:00.000Z",
+        "updated": "2026-06-25T00:00:00.000Z",
+        "abs_url": "https://doi.org/10.1145/3637528.3671807",
+        "pdf_url": "https://doi.org/10.1145/3637528.3671807",
+        "comment": "Crossref record 10.1145/3637528.3671807",
+        "authors_joined": "Kien Duong, Vy Ly",
+        "categories_joined": "Robustness, Information Retrieval",
+        "summary_chars": 206,
+        "text_for_embedding": "Title: Synthetic Corruption Testing: Stress-Testing Vector Search Robustness\nAuthors: Kien Duong, Vy Ly\nPublished: 2026-06-25\nCategories: Robustness, Information Retrieval\nSummary: We introduce an automated fuzzing suite that corrupts text chunks by injecting noise, truncating titles, and blanking summaries. Experiments reveal critical failure thresholds for dense embedding retrieval.",
+        "age_days": 93
+      },
+      "after": null
+    },
+    {
+      "corruption_type": "drop_latest_records",
+      "paper_id": "10.1145/3637528.3671802",
+      "column": "row",
+      "before": {
+        "paper_id": "10.1145/3637528.3671802",
+        "title": "Data Observability and Quality Gates for Production RAG Systems",
+        "summary": "Silent data corruption in RAG pipelines degrades LLM answer faithfulness without throwing runtime errors. We introduce automated quality gates using Great Expectations 1.x to catch stale and malformed embeddings before serving.",
+        "authors": [
+          "Anh Tran",
+          "Quoc Pham"
+        ],
+        "categories": [
+          "Software Engineering",
+          "Data Systems"
+        ],
+        "primary_category": "Software Engineering",
+        "published": "2026-06-12T00:00:00.000Z",
+        "updated": "2026-06-12T00:00:00.000Z",
+        "abs_url": "https://doi.org/10.1145/3637528.3671802",
+        "pdf_url": "https://doi.org/10.1145/3637528.3671802",
+        "comment": "Crossref record 10.1145/3637528.3671802",
+        "authors_joined": "Anh Tran, Quoc Pham",
+        "categories_joined": "Software Engineering, Data Systems",
+        "summary_chars": 227,
+        "text_for_embedding": "Title: Data Observability and Quality Gates for Production RAG Systems\nAuthors: Anh Tran, Quoc Pham\nPublished: 2026-06-12\nCategories: Software Engineering, Data Systems\nSummary: Silent data corruption in RAG pipelines degrades LLM answer faithfulness without throwing runtime errors. We introduce automated quality gates using Great Expectations 1.x to catch stale and malformed embeddings before serving.",
+        "age_days": 106
+      },
+      "after": null
+    },
+    {
+      "corruption_type": "blank_summary",
+      "paper_id": "10.1145/3637528.3671824",
+      "column": "summary",
+      "before": "An extended empirical study on tatic benchmarks fail to capture domain drift in enterprise knowledge bases. We establish a synthetic test generator that auto-creates paired evaluation sets whenever new corpora are ingested Further analysis on scaling parameters.",
+      "after": ""
+    },
+    {
+      "corruption_type": "blank_summary",
+      "paper_id": "10.1145/3637528.3671823",
+      "column": "summary",
+      "before": "An extended empirical study on ense vector search excels at conceptual similarity but struggles with exact acronyms and serial numbers. Reciprocal Rank Fusion of sparse lexical scores and dense embeddings achieves optimal recall Further analysis on scaling parameters.",
+      "after": ""
+    },
+    {
+      "corruption_type": "blank_summary",
+      "paper_id": "10.1145/3637528.3671822",
+      "column": "summary",
+      "before": "An extended empirical study on mbedding quality checks directly into data pipelines enables fail-closed governance. We show how Great Expectations suites catch schema drifts and null fields before documents reach the embedding model Further analysis on scaling parameters.",
+      "after": ""
+    },
+    {
+      "corruption_type": "blank_summary",
+      "paper_id": "10.1145/3637528.3671821",
+      "column": "summary",
+      "before": "An extended empirical study on ierarchical and semantic boundary chunking preserves code block contexts and markdown headings. Our benchmark demonstrates superior top-1 recall compared to fixed character length sliding windows Further analysis on scaling parameters.",
+      "after": ""
+    },
+    {
+      "corruption_type": "inject_noise",
+      "paper_id": "10.1145/3637528.3671810",
+      "column": "summary",
+      "before": "Embedding quality checks directly into data pipelines enables fail-closed governance. We show how Great Expectations suites catch schema drifts and null fields before documents reach the embedding model.",
+      "after": "@@@ ### CORRUPTED_DATA ### %%% Embedding quality checks directly into data pipelines enables fail-closed governance. We show how Great Expectations suites catch schema drifts and null fields before documents reach the embedding model. @@@ ### CORRUPTED_DATA ### %%%"
+    },
+    {
+      "corruption_type": "inject_noise",
+      "paper_id": "10.1145/3637528.3671820",
+      "column": "summary",
+      "before": "An extended empirical study on single LLM is susceptible to confirmation bias when evaluating retrieved evidence. We demonstrate a multi-agent debate architecture where specialized verifier agents critique and corroborate citations Further analysis on scaling parameters.",
+      "after": "@@@ ### CORRUPTED_DATA ### %%% An extended empirical study on single LLM is susceptible to confirmation bias when evaluating retrieved evidence. We demonstrate a multi-agent debate architecture where specialized verifier agents critique and corroborate citations Further analysis on scaling parameters. @@@ ### CORRUPTED_DATA ### %%%"
+    },
+    {
+      "corruption_type": "inject_noise",
+      "paper_id": "10.1145/3637528.3671819",
+      "column": "summary",
+      "before": "An extended empirical study on e introduce an automated fuzzing suite that corrupts text chunks by injecting noise, truncating titles, and blanking summaries. Experiments reveal critical failure thresholds for dense embedding retrieval Further analysis on scaling parameters.",
+      "after": "@@@ ### CORRUPTED_DATA ### %%% An extended empirical study on e introduce an automated fuzzing suite that corrupts text chunks by injecting noise, truncating titles, and blanking summaries. Experiments reveal critical failure thresholds for dense embedding retrieval Further analysis on scaling parameters. @@@ ### CORRUPTED_DATA ### %%%"
+    },
+    {
+      "corruption_type": "inject_noise",
+      "paper_id": "10.1145/3637528.3671818",
+      "column": "summary",
+      "before": "An extended empirical study on onnecting LLMs directly to raw warehouse tables often results in schema misunderstandings. A governed semantic layer standardizes business metric definitions, dramatically boosting SQL generation accuracy Further analysis on scaling parameters.",
+      "after": "@@@ ### CORRUPTED_DATA ### %%% An extended empirical study on onnecting LLMs directly to raw warehouse tables often results in schema misunderstandings. A governed semantic layer standardizes business metric definitions, dramatically boosting SQL generation accuracy Further analysis on scaling parameters. @@@ ### CORRUPTED_DATA ### %%%"
+    },
+    {
+      "corruption_type": "truncate_title",
+      "paper_id": "10.1145/3637528.3671824",
+      "column": "title",
+      "before": "Advanced Perspectives on Continuous Benchmark Evaluation for Enterprise Retrieval Pipelines",
+      "after": "Advance"
+    },
+    {
+      "corruption_type": "truncate_title",
+      "paper_id": "10.1145/3637528.3671823",
+      "column": "title",
+      "before": "Advanced Perspectives on Hybrid Search Architectures: Combining BM25 with Dense Representations",
+      "after": "Advance"
+    },
+    {
+      "corruption_type": "truncate_title",
+      "paper_id": "10.1145/3637528.3671822",
+      "column": "title",
+      "before": "Advanced Perspectives on Automated Data Quality Profiling with Great Expectations in CI/CD",
+      "after": "Advance"
+    },
+    {
+      "corruption_type": "truncate_title",
+      "paper_id": "10.1145/3637528.3671821",
+      "column": "title",
+      "before": "Advanced Perspectives on Chunking Strategies for Technical Documentation Retrieval",
+      "after": "Advance"
+    },
+    {
+      "corruption_type": "stale_date",
+      "paper_id": "10.1145/3637528.3671824",
+      "column": "published",
+      "before": "2026-06-12T00:00:00.000Z",
+      "after": "2025-06-12T00:00:00.000Z"
+    },
+    {
+      "corruption_type": "stale_date",
+      "paper_id": "10.1145/3637528.3671823",
+      "column": "published",
+      "before": "2026-06-11T00:00:00.000Z",
+      "after": "2025-06-11T00:00:00.000Z"
+    },
+    {
+      "corruption_type": "stale_date",
+      "paper_id": "10.1145/3637528.3671822",
+      "column": "published",
+      "before": "2026-06-10T00:00:00.000Z",
+      "after": "2025-06-10T00:00:00.000Z"
+    },
+    {
+      "corruption_type": "stale_date",
+      "paper_id": "10.1145/3637528.3671821",
+      "column": "published",
+      "before": "2026-06-09T00:00:00.000Z",
+      "after": "2025-06-09T00:00:00.000Z"
+    },
+    {
+      "corruption_type": "duplicate_rows",
+      "paper_id": "10.1145/3637528.3671824",
+      "column": "paper_id",
+      "before": "10.1145/3637528.3671824",
+      "after": "10.1145/3637528.3671824"
+    },
+    {
+      "corruption_type": "duplicate_rows",
+      "paper_id": "10.1145/3637528.3671823",
+      "column": "paper_id",
+      "before": "10.1145/3637528.3671823",
+      "after": "10.1145/3637528.3671823"
+    },
+    {
+      "corruption_type": "duplicate_rows",
+      "paper_id": "10.1145/3637528.3671822",
+      "column": "paper_id",
+      "before": "10.1145/3637528.3671822",
+      "after": "10.1145/3637528.3671822"
+    },
+    {
+      "corruption_type": "duplicate_rows",
+      "paper_id": "10.1145/3637528.3671821",
+      "column": "paper_id",
+      "before": "10.1145/3637528.3671821",
+      "after": "10.1145/3637528.3671821"
+    }
+  ]
+}

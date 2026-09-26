@@ -87,5 +87,75 @@ def generate_corruption_report(
     corrupted_freshness: dict[str, Any],
     repaired_freshness: dict[str, Any],
 ) -> None:
-    """TODO(student): viet markdown report so sanh baseline/corrupted/repaired."""
-    raise NotImplementedError("Student task: implement corruption comparison report.")
+    """Write a three-state comparison report for corruption and repair."""
+    metric_names = {
+        "samples": "Samples",
+        "retrieval_hit_rate": "Retrieval hit rate",
+        "mean_token_f1": "Mean token F1",
+        "judge_accuracy": "Judge accuracy",
+        "mean_judge_score": "Mean judge score",
+    }
+    metric_rows = []
+    for key, label in metric_names.items():
+        metric_rows.append(
+            "| "
+            f"{label} | {_format_metric(baseline_metrics.get(key, 0))} | "
+            f"{_format_metric(corrupted_metrics.get(key, 0))} | "
+            f"{_format_metric(repaired_metrics.get(key, 0))} |"
+        )
+
+    quality_rows = [
+        "| Rows | "
+        f"{baseline_metrics.get('source_rows', '-')} | "
+        f"{corrupted_quality.get('row_count', 0)} | "
+        f"{repaired_quality.get('row_count', 0)} |",
+        "| Quality gate | - | "
+        f"{'PASS' if corrupted_quality.get('quality_success') else 'FAIL'} | "
+        f"{'PASS' if repaired_quality.get('quality_success') else 'FAIL'} |",
+        "| Freshness SLA | - | "
+        f"{'FRESH' if corrupted_freshness.get('is_fresh') else 'STALE'} | "
+        f"{'FRESH' if repaired_freshness.get('is_fresh') else 'STALE'} |",
+        "| Stale rows | - | "
+        f"{corrupted_freshness.get('stale_rows', 0)} | "
+        f"{repaired_freshness.get('stale_rows', 0)} |",
+        "| Stale ratio | - | "
+        f"{_format_metric(corrupted_freshness.get('stale_ratio', 0.0))} | "
+        f"{_format_metric(repaired_freshness.get('stale_ratio', 0.0))} |",
+    ]
+
+    baseline_hit = float(baseline_metrics.get("retrieval_hit_rate", 0.0))
+    corrupted_hit = float(corrupted_metrics.get("retrieval_hit_rate", 0.0))
+    repaired_hit = float(repaired_metrics.get("retrieval_hit_rate", 0.0))
+    degradation = baseline_hit - corrupted_hit
+    recovery = repaired_hit - corrupted_hit
+    remaining_gap = baseline_hit - repaired_hit
+
+    lines = [
+        "# Data Corruption and Recovery Report",
+        "",
+        "## Evaluation comparison",
+        "",
+        "| Metric | Baseline | Corrupted | Repaired |",
+        "| --- | ---: | ---: | ---: |",
+        *metric_rows,
+        "",
+        "## Data quality comparison",
+        "",
+        "| Check | Baseline | Corrupted | Repaired |",
+        "| --- | ---: | ---: | ---: |",
+        *quality_rows,
+        "",
+        "## Impact analysis",
+        "",
+        f"- Retrieval degradation after corruption: **{degradation:.4f}**.",
+        f"- Retrieval recovery after rebuilding from raw snapshot: **{recovery:.4f}**.",
+        f"- Remaining retrieval gap versus baseline: **{remaining_gap:.4f}**.",
+        "- The corrupted quality gate is expected to fail because blank summaries and duplicated paper IDs violate the contract.",
+        "- Repair is idempotent because it rebuilds clean artifacts from the unchanged raw snapshot instead of editing corrupted rows in place.",
+        "",
+        "## Conclusion",
+        "",
+        "The comparison demonstrates the silent-failure pattern: the pipeline can still execute while retrieval quality and data-quality signals degrade. Rebuilding from the trusted raw snapshot restores the clean dataset and its index.",
+        "",
+    ]
+    write_text(report_path, "\n".join(lines))
